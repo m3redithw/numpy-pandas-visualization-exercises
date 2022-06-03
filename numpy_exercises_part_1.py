@@ -180,6 +180,7 @@ c = [
 c = np.array(c)
 print(c.min()) # 1
 print(c.max()) # 9
+print(c.sum()) # 45
 print(c.prod()) # 362880
 
 # Exercise 2 - Determine the standard deviation of c.
