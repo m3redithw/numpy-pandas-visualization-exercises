@@ -106,6 +106,7 @@ fruits.value_counts().idxmin()
 # 'strawberry'
 
 # exercise part 2
+
 # 1. Capitalize all the string values in fruits.
 
 fruits.str.upper()
@@ -227,3 +228,66 @@ fruits[vowel].sort_values()
 # 2          strawberry
 # 2          strawberry
 # dtype: object
+
+# exercise part 3
+
+# Use pandas to create a Series named letters from the following string.
+
+letters = pd.Series(list('hnvidduckkqxwymbimkccexbkmqygkxoyndmcxnwqarhyffsjpsrabtjzsypmzadfavyrnndndvswreauxovncxtwzpwejilzjrmmbbgbyxvjtewqthafnbkqplarokkyydtubbmnexoypulzwfhqvckdpqtpoppzqrmcvhhpwgjwupgzhiofohawytlsiyecuproguy'
+))
+
+# 1. Which letter occurs the most frequently in the letters Series?
+
+letters.value_counts().idxmax()
+# 'y'
+
+# 2. Which letter occurs the Least frequently?
+
+letters.value_counts().nsmallest(n=1, keep='all')
+# l    4
+# dtype: int64
+
+# 3. How many vowels are in the Series?
+
+letters.str.count('[aeiou]').sum()
+# 34
+
+# 4. How many consonants are in the Series?
+
+letters.str.count('[bcdfghjklmnpqrstvwxzy]').sum()
+# 166
+
+# 5. Create a Series that has all of the same letters but uppercased.
+
+letters.str.upper()
+# 0      H
+# 1      N
+# 2      V
+# 3      I
+# 4      D
+#       ..
+# 195    R
+# 196    O
+# 197    G
+# 198    U
+# 199    Y
+# Length: 200, dtype: object
+
+# 6. Create a bar plot of the frequencies of the 6 most commonly occuring letters.
+
+letters.value_counts().nlargest(n=5, keep='all')
+# y    13
+# p    12
+# w    10
+# b     9
+# n     9
+# k     9
+# m     9
+# dtype: int64
+
+letters.value_counts().nlargest(n=5, keep='all').plot.bar()
+
+# Use pandas to create a Series named numbers from the following list:
+
+numbers = pd.Series(['$796,459.41', '$278.60', '$482,571.67', '$4,503,915.98', '$2,121,418.3', '$1,260,813.3', '$87,231.01', '$1,509,175.45', '$4,138,548.00', '$2,848,913.80', '$594,715.39', '$4,789,988.17', '$4,513,644.5', '$3,191,059.97', '$1,758,712.24', '$4,338,283.54', '$4,738,303.38', '$2,791,759.67', '$769,681.94', '$452,650.23'])
+
