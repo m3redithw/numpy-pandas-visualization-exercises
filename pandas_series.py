@@ -204,6 +204,9 @@ fruits[omorethantwo]
 # 15    gooseberry
 # dtype: object
 
+## using lambda
+fruits[fruits.apply(lambda fruit: fruit.count('o')> 1)]
+
 # 7. Write the code to get only the string values containing the substring "berry".
 
 substr = 'berry'
