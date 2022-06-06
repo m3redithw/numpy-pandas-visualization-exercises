@@ -96,7 +96,7 @@ fruits.value_counts()
 # fruits.value_counts().nlargest(n=1).index[0]
 fruits.value_counts().idxmax()
 
-# # 'kiwi'
+# 'kiwi'
 
 # 10. Determine the string value that occurs least frequently in fruits.
 
@@ -225,26 +225,9 @@ fruits[fruits.str.contains(substr)]
 
 # 9. Which string value contains the most vowels?
 
-vowel = fruits.str.count(r'[aeiou]')
-fruits[vowel].sort_values()
-# 4          gala apple
-# 4          gala apple
-# 4          gala apple
-# 4          gala apple
-# 5    honeycrisp apple
-# 3           pineapple
-# 3           pineapple
-# 3           pineapple
-# 3           pineapple
-# 2          strawberry
-# 2          strawberry
-# 2          strawberry
-# 2          strawberry
-# 2          strawberry
-# 2          strawberry
-# 2          strawberry
-# 2          strawberry
-# dtype: object
+vowel = fruits.str.count('[aeiou]')
+fruits[vowel.idxmax()]
+# honeycrisp apple
 
 # exercise part 3
 
