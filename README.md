@@ -1,7 +1,7 @@
 # numpy-pandas-visualization-exercises
 Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 
-## Numpy ![Numpy](https://en.wikipedia.org/wiki/NumPy#/media/File:NumPy_logo_2020.svg)
+## Numpy ![ ](https://png.pngitem.com/pimgs/s/465-4651848_numpy-python-logo-hd-png-download.png)
 
 #### Public Resources
 [NumPy Documentation](https://numpy.org/doc/)
