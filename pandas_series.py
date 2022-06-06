@@ -37,6 +37,14 @@ fruits.head(5)
 # 4    gala apple
 # dtype: object
 
+## Output the last three values.
+
+fruits.tail(3)
+# 14    blackberry
+# 15    gooseberry
+# 16        papaya
+# dtype: object
+
 ## Output two random values from fruits.
 
 fruits.sample(2)
@@ -55,25 +63,11 @@ fruits.describe()
 
 # 7. Run the code necessary to produce only the unique string values from fruits.
 
-fruits.astype('str')
-# 0                 kiwi
-# 1                mango
-# 2           strawberry
-# 3            pineapple
-# 4           gala apple
-# 5     honeycrisp apple
-# 6               tomato
-# 7           watermelon
-# 8             honeydew
-# 9                 kiwi
-# 10                kiwi
-# 11                kiwi
-# 12               mango
-# 13           blueberry
-# 14          blackberry
-# 15          gooseberry
-# 16              papaya
-# dtype: object
+# fruits.value_counts().index
+fruits.unique()
+# array(['kiwi', 'mango', 'strawberry', 'pineapple', 'gala apple',
+#        'honeycrisp apple', 'tomato', 'watermelon', 'honeydew',
+#        'blueberry', 'blackberry', 'gooseberry', 'papaya'], dtype=object)
 
 # 8. Determine how many times each unique string value occurs in fruits.
 
@@ -94,12 +88,17 @@ fruits.value_counts()
 # dtype: int64
 
 # 9. Determine the string value that occurs most frequently in fruits.
-# fruits.mode()
 
+# fruits.mode()
+# fruits.value_counts().head(1)
+# fruits.value_counts().nlargest(n=1).index[0]
 fruits.value_counts().idxmax()
-# 'kiwi'
+
+# # 'kiwi'
 
 # 10. Determine the string value that occurs least frequently in fruits.
 
+# fruits.value_counts().tail()
+# fruits.value_counts().nsmallest(n=1, keep='all')
 fruits.value_counts().idxmin()
 # 'strawberry'
