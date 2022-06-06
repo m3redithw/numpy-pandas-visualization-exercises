@@ -294,3 +294,56 @@ letters.value_counts().nlargest(n=5, keep='all').plot.bar()
 
 numbers = pd.Series(['$796,459.41', '$278.60', '$482,571.67', '$4,503,915.98', '$2,121,418.3', '$1,260,813.3', '$87,231.01', '$1,509,175.45', '$4,138,548.00', '$2,848,913.80', '$594,715.39', '$4,789,988.17', '$4,513,644.5', '$3,191,059.97', '$1,758,712.24', '$4,338,283.54', '$4,738,303.38', '$2,791,759.67', '$769,681.94', '$452,650.23'])
 
+# 1. What is the data type of the numbers Series?
+
+numbers.dtype
+# dtype('O')
+
+# 2. How many elements are in the number Series?
+
+numbers.size
+# 20
+
+# 3. Perform the necessary manipulations by accessing Series attributes and methods to convert the numbers Series to a numeric data type.
+
+stepone = numbers.str.replace('$','')
+steptwo = stepone.str.replace(',','')
+newnums = steptwo.astype('float')
+newnums
+
+# 4. Run the code to discover the maximum value from the Series.
+
+newnums[newnums.idxmax()]
+# 4789988.17
+
+# 5. Run the code to discover the minimum value from the Series.
+
+newnums[newnums.idxmin()]
+# 278.6
+
+# 6. What is the range of the values in the Series?
+
+newnums.describe()
+# count    2.000000e+01
+# mean     2.284406e+06
+# std      1.735261e+06
+# min      2.786000e+02
+# 25%      7.259403e+05
+# 50%      1.940065e+06
+# 75%      4.188482e+06
+# max      4.789988e+06
+# dtype: float64
+
+# 7. Bin the data into 4 equally sized intervals or bins and output how many values fall into each bin.
+
+pd.cut(newnums, 4).value_counts()
+# (-4511.11, 1197705.993]       7
+# (3592560.778, 4789988.17]     6
+# (1197705.993, 2395133.385]    4
+# (2395133.385, 3592560.778]    3
+# dtype: int64
+
+# 8. Plot the binned data in a meaningful way. Be sure to include a title and axis labels.
+
+pd.cut(newnums, 4).value_counts().plot.hist(title = 'currency', color = '#e0ac69')
+
