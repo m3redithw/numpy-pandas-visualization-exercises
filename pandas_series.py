@@ -347,3 +347,67 @@ pd.cut(newnums, 4).value_counts()
 
 pd.cut(newnums, 4).value_counts().plot.hist(title = 'currency', color = '#e0ac69')
 
+# Use pandas to create a Series named exam_scores from the following list:
+
+exam_scores = pd.Series([60, 86, 75, 62, 93, 71, 60, 83, 95, 78, 65, 72, 69, 81, 96, 80, 85, 92, 82, 78])
+
+# 1. How many elements are in the exam_scores Series?
+
+exam_scores.size
+# 20
+
+# 2. Run the code to discover the minimum, the maximum, the mean, and the median scores for the exam_scores Series.
+
+exam_scores.describe()
+# count    20.000000
+# mean     78.150000
+# std      11.352139
+# min      60.000000
+# 25%      70.500000
+# 50%      79.000000
+# 75%      85.250000
+# max      96.000000
+# dtype: float64
+
+# 3. Plot the Series in a meaningful way and make sure your chart has a title and axis labels.
+
+pd.cut(exam_scores, bins = [59, 70, 80, 90, 100], labels = ['D', 'C', 'B', 'A']).value_counts()
+# C    6
+# D    5
+# B    5
+# A    4
+# dtype: int64
+
+pd.cut(exam_scores, bins = [59, 70, 80, 90, 100], labels = ['D', 'C', 'B', 'A']).value_counts().plot.bar(title = 'exam scores', color = '#32dbc6')
+
+plt.xticks(rotation=0)
+plt.xlabel('Letter Grade')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.show()
+
+# 4. Write the code necessary to implement a curve for your exam_grades Series and save this as curved_grades.
+# Add the necessary points to the highest grade to make it 100,
+# and add the same number of points to every other score in the Series as well.
+
+curved_grades = exam_scores + 4
+
+# 5. Use a method to convert each of the numeric values in the curved_grades Series into a categorical value of letter grades.
+# For example, 86 should be a 'B' and 95 should be an 'A'. Save this as a Series named letter_grades.
+
+letter_grades = pd.cut(curved_grades, bins=[60,70,80,90,100], labels = ['D','C','B','A'])
+# replace_d = curved_grades.replace(range(60,70),'D')
+# replace_c = replace_d.replace(range(70,80),'C')
+# replace_b = replace_c.replace(range(80,90),'B')
+# letter_grades = replace_b.replace(range(90,101),'A')
+# letter_grades
+
+# 6. Plot your new categorical letter_grades Series in a meaninful way and include a title and axis labels.
+
+## Using pandas
+letter_grades.value_counts().sort_index().plot.bar(title = 'Letter Grades')
+
+## Using matplotlib
+x = letter_grades.value_counts().index
+y = letter_grades.value_counts().values
+plt.bar(x,y)
