@@ -136,7 +136,24 @@ fruits.str.count('a').sum()
 
 # 3. Output the number of vowels in each and every string value.
 
-# vowels = list('aeiou'
+## method a
+# vowel_counts = pd.Series(0, index = range(17), dtype = 'int')
+# vowels = ['a','e','i','o','u']
+
+# for vowel in vowels:
+#     vowel_counts += fruits.str.count(vowel)
+
+
+## method b
+# def vowel_counter(string):
+#     counter = 0
+#     for char in string:
+#         if char in 'aeiou':
+#             counter += 1
+#     return counter
+
+
+## method c
 fruits.str.count(r'[aeiou]')
 # 0     2
 # 1     2
@@ -159,8 +176,8 @@ fruits.str.count(r'[aeiou]')
 
 # 4. Write the code to get the longest string value from fruits.
 
-fruits.str.len().max()
-#16
+fruits[fruits.str.len().idxmax()]
+# 'honeycrisp apple'
 
 # 5. Write the code to get the string values with 5 or more letters in the name.
 
