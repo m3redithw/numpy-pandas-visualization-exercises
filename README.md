@@ -42,6 +42,8 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 
 [pandas_series_exercises.py](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/pandas_series.py)
 
+[dataframes.py](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/2a762e2636ccbfb2ba5d1e372b5544593bdf233b/dataframes.py)
+
 ***
 ![ ](https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png)
 
