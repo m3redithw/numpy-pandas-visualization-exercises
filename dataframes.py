@@ -171,9 +171,6 @@ percentage
 # How many animals are hoppers that are above the median speed? What percentage is this?
 
 m['median_speed'] = m['speed'].median()
-
-m.head()
-
 m[(m['speed']>m['median_speed']) & (m['hoppers'] == True)].shape
 
 # 7
