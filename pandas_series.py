@@ -252,6 +252,8 @@ letters.value_counts().nsmallest(n=1, keep='all')
 
 # 3. How many vowels are in the Series?
 
+# vowels = list('aeiou')
+# letters.isin(vowels).value_counts()
 letters.str.count('[aeiou]').sum()
 # 34
 
@@ -288,7 +290,7 @@ letters.value_counts().nlargest(n=5, keep='all')
 # m     9
 # dtype: int64
 
-letters.value_counts().nlargest(n=5, keep='all').plot.bar()
+letters.value_counts().nlargest(n=5, keep='all').plot.bar(rot=0)
 
 # Use pandas to create a Series named numbers from the following list:
 
@@ -323,16 +325,9 @@ newnums[newnums.idxmin()]
 
 # 6. What is the range of the values in the Series?
 
-newnums.describe()
-# count    2.000000e+01
-# mean     2.284406e+06
-# std      1.735261e+06
-# min      2.786000e+02
-# 25%      7.259403e+05
-# 50%      1.940065e+06
-# 75%      4.188482e+06
-# max      4.789988e+06
-# dtype: float64
+value_range = newnums.max()-newnums.min()
+value_range
+# 4789709.57
 
 # 7. Bin the data into 4 equally sized intervals or bins and output how many values fall into each bin.
 
@@ -345,7 +340,7 @@ pd.cut(newnums, 4).value_counts()
 
 # 8. Plot the binned data in a meaningful way. Be sure to include a title and axis labels.
 
-pd.cut(newnums, 4).value_counts().plot.hist(title = 'currency', color = '#e0ac69')
+pd.cut(newnums, bins = 4, labels = ['Small', 'Medium', 'Large', 'Extralarge']).value_counts().plot.bar(title = 'currency', color = '#e0ac69')
 
 # Use pandas to create a Series named exam_scores from the following list:
 
