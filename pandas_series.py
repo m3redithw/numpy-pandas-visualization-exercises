@@ -311,7 +311,6 @@ numbers.size
 stepone = numbers.str.replace('$','')
 steptwo = stepone.str.replace(',','')
 newnums = steptwo.astype('float')
-newnums
 
 # 4. Run the code to discover the maximum value from the Series.
 
