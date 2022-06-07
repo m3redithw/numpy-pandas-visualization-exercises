@@ -37,11 +37,11 @@ df.sort_values(by='passing_english')[['english','passing_english']]
 ## The same should be true for the students passing english.
 ## (Hint: you can pass a list to the .sort_values method)
 
-df.sort_values(by = ['passing_english','name'])[['name', 'english','passing_english']]
+df.sort_values(by = ['passing_english', 'name'])[['name', 'english', 'passing_english']]
 
 ## d. Sort the english grades first by passing_english, and then by the actual english grade, similar to how we did in the last step.
 
-df.sort_values(by=['passing_english', 'english'])[['name','english','passing_english']]
+df.sort_values(by = ['passing_english', 'english'])[['name', 'english', 'passing_english']]
 
 ## e. Calculate each students overall grade and add it as a column on the dataframe.
 ## The overall grade is the average of the math, english, and reading grades.
@@ -174,11 +174,11 @@ m['median_speed'] = m['speed'].median()
 
 m.head()
 
-m[m['speed']>m['median_speed']].count()
+m[(m['speed']>m['median_speed']) & (m['hoppers'] == True)].shape
 
-# 53
+# 7
 
-median_percentage = m[m['speed']>m['median_speed']].count() / 107 * 100
+median_percentage = 7 / 107 * 100
 median_percentage
 
 # 49.53%
