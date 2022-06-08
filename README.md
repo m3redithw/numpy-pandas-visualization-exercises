@@ -27,15 +27,15 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 ![ ](https://www.kindpng.com/picc/m/574-5747046_python-pandas-logo-transparent-hd-png-download.png)
 
 #### Pandas Resources
-[pandas User Guide](https://pandas.pydata.org/docs/user_guide/index.html)
+[Pandas User Guide](https://pandas.pydata.org/docs/user_guide/index.html)
 
 [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
 
-[pandas Cheat Sheet](http://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+[Pandas Cheat Sheet](http://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
-[pandas Comparison with with SQL](https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_sql.html)
+[Pandas Comparison with with SQL](https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_sql.html)
 
-[pandas Index Explained](https://towardsdatascience.com/pandas-index-explained-b131beaf6f7b)
+[Pandas Index Explained](https://towardsdatascience.com/pandas-index-explained-b131beaf6f7b)
 
 #### Codeup Data Science Module - Pandas
 [pandas_notes](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/pandas_notes.ipynb)
@@ -48,7 +48,7 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 ![ ](https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png)
 
 #### Matplotlib Resources
-[matplotlib Tutorials](https://matplotlib.org/stable/tutorials/index.html)
+[Matplotlib Tutorials](https://matplotlib.org/stable/tutorials/index.html)
 
 [Text rendering with LaTex](https://matplotlib.org/stable/tutorials/text/usetex.html)
 
