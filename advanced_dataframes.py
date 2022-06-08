@@ -14,6 +14,12 @@ get_db_url = f'mysql+pymysql://{user}:{password}@{host}/employees'
 
 pd.read_sql('SELECT * FROM employees LIMIT 5 OFFSET 50', get_db_url)
 
+# def get_db_url(username, hostname, password, database_name):
+#     return f'mysql+pymysql://{user}:{password}@{host}/(database_name)'
+    
+# url = get_db_url(username, host, password, 'employees')
+# # pd.read_sql(query, url)
+
 # 5. Once you have successfully run a query:
 ## a. Intentionally make a typo in the database url. What kind of error message do you see?
 
@@ -137,6 +143,7 @@ users.merge(roles, left_on='role_id', right_on='id', how='outer', indicator=True
 
 # 4. What happens if you drop the foreign keys from the DataFrames and try to merge them?
 
+users.merge(roles, how='inner', on='id').drop(columns='role_id')
 
 # 5. Load the mpg dataset from PyDataset.
 
@@ -214,3 +221,85 @@ better.head()
 # is_automatic 	
 # False 	22.227273
 # True 	19.130573
+
+
+# ----------------------------------------------------------------
+# Exercise 3
+# 1. Use your get_db_url function to help you explore the data from the chipotle database.
+
+get_db_url = f'mysql+pymysql://{user}:{password}@{host}/chipotle'
+query = '''
+SELECT *
+FROM orders
+'''
+chipo = pd.read_sql(query, get_db_url)
+chipo
+
+# 2. What is the total price for each order?
+
+changetype = lambda x: float(x[1:-1])
+chipo['item_price'] = chipo['item_price'].apply(changetype) 
+chipo.head()
+
+chipo['total'] = chipo['quantity']*chipo['item_price']
+chipo.groupby(by = ['order_id']).total.sum()
+# order_id
+# 1       11.56
+# 2       33.96
+# 3       12.67
+# 4       21.00
+# 5       13.70
+#         ...  
+# 1830    23.00
+# 1831    12.90
+# 1832    13.20
+# 1833    23.50
+# 1834    28.75
+
+# 3. What are the most popular 3 items?
+
+chipo.groupby('item_name').quantity.sum().sort_values(ascending = False).head(3)
+# item_name
+# Chicken Bowl           761
+# Chicken Burrito        591
+# Chips and Guacamole    506
+
+# 4. Which item has produced the most revenue?
+
+chipo.groupby('item_name').total.sum().sort_values(ascending = False).head()
+# Chicken Bowl           8044.63
+
+# 5. Join the employees and titles DataFrames together.
+
+et = employees.merge(titles, how = 'inner', left_on = 'emp_no', right_on = 'emp_no')
+et
+
+# 6. For each title, find the hire date of the employee that was hired most recently with that title.
+
+et.groupby('title').from_date.max()
+
+# 7. Write the code necessary to create a cross tabulation of the number of titles by department. (Hint: this will involve a combination of SQL code to pull the necessary data and python/pandas code to perform the manipulations.)
+
+query = '''
+SELECT e.emp_no, t.title, d.dept_name
+FROM employees AS e
+    JOIN titles AS t USING(emp_no)
+    JOIN dept_emp AS de USING(emp_no)
+    JOIN departments as d USING(dept_no)
+'''
+
+dept_emp_titles = pd.read_sql(query, get_db_url)
+dept_emp_titles
+pd.crosstab(dept_emp_titles.dept_name, dept_emp_titles.title, margins=True)
+# title 	Assistant Engineer 	Engineer 	Manager 	Senior Engineer 	Senior Staff 	Staff 	Technique Leader 	All
+# dept_name 								
+# Customer Service 	298 	2362 	4 	2027 	13925 	16150 	309 	35075
+# Development 	7769 	58135 	2 	49326 	1247 	1424 	7683 	125586
+# Finance 	0 	0 	2 	0 	12139 	13929 	0 	26070
+# Human Resources 	0 	0 	2 	0 	12274 	14342 	0 	26618
+# Marketing 	0 	0 	2 	0 	13940 	16196 	0 	30138
+# Production 	6445 	49649 	4 	42205 	1270 	1478 	6557 	107608
+# Quality Management 	1831 	13852 	4 	11864 	0 	0 	1795 	29346
+# Research 	378 	2986 	2 	2570 	11637 	13495 	393 	31461
+# Sales 	0 	0 	2 	0 	36191 	41808 	0 	78001
+# All 	16721 	126984 	24 	107992 	102623 	118822 	16737 	489903
