@@ -13,9 +13,9 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 #### Codeup Data Science Module - NumPy
 [numpy_notes](numpy_notes.ipynb)
 
-[numpy_exercises.ipynb](numpy_exercises.ipynb)
+[numpy_exercises](numpy_exercises.ipynb)
 
-[additional_numpy_exercises.ipynb](numpy_exercises_part_1.ipynb)
+[additional_numpy_exercises](numpy_exercises_part_1.ipynb)
 
 [100 Numpy Exercises](https://github.com/m3redithw/numpy-100)
 
@@ -36,9 +36,9 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 #### Codeup Data Science Module - Pandas
 [pandas_notes](pandas_notes.ipynb)
 
-[pandas_series_exercises.py](pandas_series.py)
+[pandas_series_exercises](pandas_series.py)
 
-[dataframes.py](dataframes.py)
+[dataframes](dataframes.ipynb)
 
 [advanced_dataframes](advanced_dataframes.ipynb)
 
