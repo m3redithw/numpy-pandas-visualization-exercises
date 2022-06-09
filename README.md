@@ -11,15 +11,11 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 [Python For Data Science Cheat Sheet NumPy Basics](https://web.itu.edu.tr/iguzel/files/Python_Cheat_Sheets.pdf)
 
 #### Codeup Data Science Module - NumPy
-[numpy_notes](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/986dfd31281d16e9f63d12e4772f0712d9c649c9/numpy_notes.ipynb)
+[numpy_notes](numpy_notes.ipynb)
 
-[numpy_exercises.ipynb](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/986dfd31281d16e9f63d12e4772f0712d9c649c9/numpy_exercises.ipynb)
+[numpy_exercises.ipynb](numpy_exercises.ipynb)
 
-[numpy_exercises.py](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/986dfd31281d16e9f63d12e4772f0712d9c649c9/numpy_exercises.py)
-
-[additional_numpy_exercises.ipynb](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/986dfd31281d16e9f63d12e4772f0712d9c649c9/numpy_exercises_part_1.ipynb)
-
-[additional_numpy_exercises.py](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/986dfd31281d16e9f63d12e4772f0712d9c649c9/numpy_exercises_part_1.ipynb)
+[additional_numpy_exercises.ipynb](numpy_exercises_part_1.ipynb)
 
 [100 Numpy Exercises](https://github.com/m3redithw/numpy-100)
 
@@ -38,11 +34,15 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 [Pandas Index Explained](https://towardsdatascience.com/pandas-index-explained-b131beaf6f7b)
 
 #### Codeup Data Science Module - Pandas
-[pandas_notes](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/pandas_notes.ipynb)
+[pandas_notes](pandas_notes.ipynb)
 
-[pandas_series_exercises.py](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/pandas_series.py)
+[pandas_series_exercises.py](pandas_series.py)
 
-[dataframes.py](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/7190692f21d029f69381946c64646e13464ffb94/dataframes.py)
+[dataframes.py](dataframes.py)
+
+[advanced_dataframes](advanced_dataframes.ipynb)
+
+[additional_pandas_exercises](https://github.com/m3redithw/pandas_exercises)
 
 ***
 ![ ](https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png)
@@ -55,13 +55,13 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 [Writing mathematical expressions](https://matplotlib.org/stable/tutorials/text/mathtext.html)
 
 #### Codeup Data Science Module - Matplotlib
-[matplotlib class demo](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/kalpana-matplotlib-lesson.ipynb)
+[matplotlib class demo](kalpana-matplotlib-lesson.ipynb)
 
-[matplotlib_notes](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/matplotlib_notes.ipynb)
+[matplotlib_notes](matplotlib_notes.ipynb)
 
-[matplotlib_exercises](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/1cdd3c46f2f53e884873f9e8dd686dd97ba4fa75/matplotlib_exercises.ipynb)
+[matplotlib_exercises](matplotlib_exercises.ipynb)
 
-[Big_O_Notion](https://github.com/m3redithw/numpy-pandas-visualization-exercises/blob/f33373be38513d768c924074f78f67499c570acd/big_o_notation.ipynb)
+[Big_O_Notion](big_o_notation.ipynb)
 
 ***
 ![ ](https://seaborn.pydata.org/_images/logo-wide-lightbg.svg)
