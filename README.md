@@ -1,5 +1,5 @@
-# numpy-pandas-visualization-exercises
-Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
+# Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
+Featuring Codeup Data Science Module on Python
 
 ![ ](https://png.pngitem.com/pimgs/s/465-4651848_numpy-python-logo-hd-png-download.png)
 
@@ -68,3 +68,6 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 
 #### Seaborn Resources
 [seaborn documentation](https://seaborn.pydata.org/)
+
+#### Codeup Data Science Module - Seaborn
+[seaborn_exercises](seaborn_exercises.ipynb)
