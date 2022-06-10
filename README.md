@@ -68,3 +68,6 @@ Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 
 #### Seaborn Resources
 [seaborn documentation](https://seaborn.pydata.org/)
+
+#### Codeup Data Science Module - Seaborn
+[seaborn_exercises](seaborn_exercises.ipynb)
