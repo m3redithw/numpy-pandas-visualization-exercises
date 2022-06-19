@@ -1,5 +1,5 @@
-# Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
-Featuring Codeup Data Science Module on Python
+## Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
+### Featuring Codeup Data Science Module on Python
 
 ![ ](https://png.pngitem.com/pimgs/s/465-4651848_numpy-python-logo-hd-png-download.png)
 
@@ -71,3 +71,7 @@ Featuring Codeup Data Science Module on Python
 
 #### Codeup Data Science Module - Seaborn
 [seaborn_exercises](seaborn_exercises.ipynb)
+
+***
+### Churn Analysis Project
+[Analysis with Python](churn_analysis.ipynb)
