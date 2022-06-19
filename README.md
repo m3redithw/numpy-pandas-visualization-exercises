@@ -73,5 +73,5 @@
 [seaborn_exercises](seaborn_exercises.ipynb)
 
 ***
-#### Churn Analysis Project
+### Churn Analysis Project
 [Analysis with Python](churn_analysis.ipynb)
