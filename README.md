@@ -1,7 +1,8 @@
 ## Exploring Python libraries: NumPy, Pandas, Matplotlib, and Seaborn
 ### Featuring Codeup Data Science Module on Python
 
-![ ](https://png.pngitem.com/pimgs/s/465-4651848_numpy-python-logo-hd-png-download.png)
+![numpy logo](https://user-images.githubusercontent.com/105242871/180468762-139ccf15-245a-4725-bf9a-e31678db568d.png)
+
 
 #### NumPy Resources
 [NumPy Documentation](https://numpy.org/doc/)
